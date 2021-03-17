@@ -6,9 +6,8 @@ function [filters] = get_inverse_solution(eeg,srate,inv_meth,montage,noiseCov)
 % montage: montage based on which EEg data was computed. {'EGI_HydroCel_256',
 % 'EGI_HydroCel_128','EGI_HydroCel_64','EGI_HydroCel_32','10-20_19'}.
 
-% Outputs: filters: 2*nb_regions*nb_channels, nb_regions denotes the number
-% of cortical sources, nb_channels denotes the number of EEG channels. The
-% first dimension refers to the inverse solution (1=eLORETA, 2=wMNE)
+% Outputs: filters: nb_regions*nb_channels, nb_regions denotes the number
+% of cortical sources, nb_channels denotes the number of EEG channels. 
 
 % This code was originally developped by Sahar Allouch.
 % contact: saharallouch@gmail.com
