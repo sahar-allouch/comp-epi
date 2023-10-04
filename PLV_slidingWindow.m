@@ -13,10 +13,10 @@ function plv = PLV_slidingWindow(signals,srate,fmin,fmax)
 %% Extract the instantaneous phase using Hilbert Transform
 [nchannels,numSamples] = size(signals);
 
-% f_interest = fmin+(fmax-fmin)/2;
-% window = 6/(f_interest); % Use 6 cycles as recomended by Lachaux et al.2000
+f_interest = fmin+(fmax-fmin)/2;
+window = 6/(f_interest); % Use 6 cycles as recomended by Lachaux et al.2000
 
-window = size(signals,2)/srate; %PLV static
+% window = size(signals,2)/srate; %PLV static
 
 winSamples = floor(window * srate);
 N = floor(numSamples/winSamples);
